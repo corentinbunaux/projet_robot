@@ -207,5 +207,5 @@ void init_all(void)
     init_IT();         // init les it
     PORTBbits.RB5 = 0; // led on/off
     PORTBbits.RB1 = 0;
-    printf("Initialisation OK\r");
+    printf("Initialisation OK\n\r");
 }
