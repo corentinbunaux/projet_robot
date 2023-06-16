@@ -67,7 +67,7 @@ void HighISR(void)
             }
             else
             {
-                if (sum_mes / 4 < (255 / 5) * V_SEUIL)
+                if (sum_mes / 4 < (255 / 12) * V_SEUIL)
                 {
                     printf("\n\r\n\rBatterie faible\n\r\n\r"); // avg tension of the battery
                     PORTBbits.RB5 = 0;
