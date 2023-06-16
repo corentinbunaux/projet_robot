@@ -6,11 +6,16 @@
 
 #pragma code HighVector = 0x08
 
-unsigned float V_SEUIL = 2.5;
+unsigned float V_SEUIL = 2.5; // initalisation de la tension de seuil comme variable gloable
 
-int etat = 0, temps_tourne = 0, i, nombre_mes = 0, temps_bat = 0, compteur = 0;
-unsigned char distance;
-unsigned int sum_mes, UBAT;
+int etat = 0, temps_tourne = 0, nombre_mes = 0, temps_bat = 0, compteur = 0;
+/*etat correspond à l'état de fonctionnement du robot, temps_tourne est un
+compteur qui permet de faire tourner le robot d'un état vers un autre, nombre_mes est un compteur qui permet de moyenner la tension de la batterie, temps_bat
+est un compteur qui permet de mesurer la batterie restante du robot de manière périodique, et compteur définit le temps d'avancée du robot après rencontre
+avec un obstacle*/
+
+unsigned char distance;     // distance entre l'obstacle et le robot
+unsigned int sum_mes, UBAT; // sum_mes représente la somme des mesure de la tension de batterie, UBAT correspond à la tension de la batterie à un instant donnée
 int tourne = 1;
 char Recv_Buff[3];
 
